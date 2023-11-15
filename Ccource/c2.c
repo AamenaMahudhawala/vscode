@@ -23,8 +23,8 @@ void* myRealloc(void* srcblock, unsigned oldsize, unsigned newsize)
 {
     int i;
     int actualsize;
-    if(oldsize>newsize) actualsize=oldsize;
-    if(oldsize<newsize) actualsize=newsize;
+    if(oldsize>newsize) actualsize=newsize;
+    if(oldsize<newsize) actualsize=oldsize;
     char* newArr=(char*)malloc(newsize);
     if(!newArr) return NULL;
     for (i = 0; i < actualsize; i++)

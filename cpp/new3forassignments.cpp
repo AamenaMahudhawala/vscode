@@ -1,27 +1,28 @@
+//Static Data Members
 #include<iostream>
 using namespace std;
 
-class NewClass
+#define max 10
+
+class Product
 {
-
-    public: int a,b; //public data members which can be accessed by object
-
-    private: int private_sum() //private member function which objects cannot access
+    public:
+    static int count; 
+    
+    float price=45;
+    public:Product()
     {
-        return a+b+5;
+        count++;
     }
-
-    public: void display_sum()// Nesting of member functions
-    {
-        cout<<private_sum();
-    }
+    
+    
+      
 
 };
-
+int Product::count = 0; //initializing count as 0
 int main()
 {
-    NewClass N1;
-    N1.a = 10;
-    N1.b = 15;
-    N1.display_sum();
+    Product P1,P2;
+    cout<<P1.count<<endl;
+    return 0;
 }

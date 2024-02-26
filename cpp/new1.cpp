@@ -57,6 +57,16 @@ class polygon
 
         }
     }
+    int is_Regular()
+    {
+        int i;
+        for(i=0;i<number_of_sides-1;i++)
+        {
+            if(dimensions[i]!=dimensions[i+1])
+            return 1;
+        }
+        return 0;
+    }
 
 
 };
@@ -68,8 +78,13 @@ int main()
     int i;
     for ( i = 0; i < p1.number_of_sides; i++)
     {
-        cout<<"\nSide"<<i<<":"<<p1.dimensions[i];
+        
+        printf("Side %d : %.2f \n",i,p1.dimensions[i]);
     }
     
+    if(p1.is_Regular()==0)
+    {
+        cout<<"This is a Regular "<<p1.name<<endl;
+    }
     return 0;
 }

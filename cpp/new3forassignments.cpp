@@ -2,7 +2,6 @@
 #include<iostream>
 using namespace std;
 
-#define max 10
 
 class Product
 {

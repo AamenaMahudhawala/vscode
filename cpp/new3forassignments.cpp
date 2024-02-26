@@ -4,14 +4,14 @@ using namespace std;
 class NewClass
 {
 
-    public: int a,b;
+    public: int a,b; //public data members which can be accessed by object
 
-    private: int private_sum()
+    private: int private_sum() //private member function which objects cannot access
     {
         return a+b+5;
     }
 
-    public: void display_sum()
+    public: void display_sum()// Nesting of member functions
     {
         cout<<private_sum();
     }
